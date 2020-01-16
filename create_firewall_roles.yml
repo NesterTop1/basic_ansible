@@ -1,0 +1,26 @@
+---
+
+  
+
+- hosts: term
+  tasks:
+    - name: Add firewall rule ZabbixPort
+      win_firewall_rule:
+       name: ZabbixPort
+       enabled: yes
+       state: present
+       localport: 10050
+       action: allow
+       direction: in
+       protocol: tcp
+
+
+
+
+
+
+
+
+
+
+

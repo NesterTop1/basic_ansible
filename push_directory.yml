@@ -1,0 +1,14 @@
+---
+# Example of win_copy on a directory
+#
+
+- hosts: term
+  vars:
+    source: files
+    destination: 'C:\\path'
+  tasks:
+    - name: Copy directory to remote system
+      win_copy: 
+        src: '/etc/ansible/path' 
+        dest: '{{ destination }}'
+

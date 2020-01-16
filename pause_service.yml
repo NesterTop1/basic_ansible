@@ -1,0 +1,10 @@
+---
+
+
+- hosts: test
+  tasks:
+    - name: pause "Zabbix Agent"
+      win_service:
+        name: "Zabbix agent"
+        state: paused
+
